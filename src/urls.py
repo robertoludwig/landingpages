@@ -27,5 +27,5 @@ urlpatterns += [
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include('src.accounts.urls',  namespace='accounts')),
     url(r'^$', core_views.home, name='home'),
-    url('', include('social_django.urls', namespace='social'))
+    # url('', include('social_django.urls', namespace='social'))
 ]

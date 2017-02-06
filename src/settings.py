@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_extensions',
     'bootstrap3',
-    'social_django',
+    # 'social_django',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,7 +80,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',
+    # 'social_django.middleware.SocialAuthExceptionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 
 ]
@@ -103,8 +103,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
+                # 'social_django.context_processors.backends',
+                # 'social_django.context_processors.login_redirect',
             ],
         },
     },
