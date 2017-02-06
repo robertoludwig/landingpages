@@ -8,3 +8,4 @@ mediafiles/
 /staticfiles
 media/
 .env
+.help
