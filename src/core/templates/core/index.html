@@ -1,4 +1,128 @@
-{% extends 'index.html' %}
+{% extends 'base-guia.html' %}
+{% load static %}
 {% block content %}
-
+	<section class="banner-inicial">
+            <div class="container">
+                <div class="col-xs-12 col-sm-7 col-md-9 col-lg-9">
+                    <img src="{% static 'img/banner-guia.png' %}" alt="Banner Guia Compras Paraguai" class="banner">
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 coluna-direita-banner">
+                    <div class="titulo-formulario">
+                        <h3 class="text-center">Baixe Gratuitamente:</h3>
+                    </div>
+                    <div class="container-form row">
+						{% include "forms/usuario-guia-form.html" with form=form %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dicas">
+            <div class="container">
+                <h2 class="titulo-dicas">Seleção de dicas que você precisa saber antes, durante e depois de ir às compras no Paraguai!</h2>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <img src="{% static 'img/dicas-1.png' %}" alt="Antes">
+                    <h3>Antes</h3>
+                    <h4>Como planejar suas compras</h4>
+                    <div class="text-left">
+                        <p><i class="fa fa-list"></i> Lista de desejos</p>
+                        <p><i class="fa fa-clock-o"></i> Horário do comércio paraguaio</p>
+                        <p><i class="fa fa-file-text-o"></i> Documentos necessários</p>
+                        <p><i class="fa fa-calendar"></i> Planejamento de tempo</p>
+                        <p><i class="fa fa-info-circle"></i> Escolhendo onde comprar: as 3 cidades de compras do Paraguai</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <img src="{% static 'img/dicas-2.png' %}" alt="Durante">
+                    <h3>Durante</h3>
+                    <h4>O que fazer durante as compras no Paraguai</h4>
+                    <div class="text-left">
+                        <p><i class="fa fa-dollar"></i> Dicas de câmbio</p>
+                        <p><i class="fa fa-handshake-o"></i> Onde comprar</p>
+                        <p><i class="fa fa-money"></i> Como pagar</p>
+                        <p><i class="fa fa-check"></i> Garantia de produtos</p>
+                        <p><i class="fa fa-close"></i> Cuidados com produtos falsificados</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <img src="{% static 'img/dicas-3.png' %}" alt="Depois">
+                    <h3>Depois</h3>
+                    <h4>Voltando para casa</h4>
+                    <div class="text-left">
+                        <p><i class="fa fa-eye"></i> Fiscalização aduaneira</p>
+                        <p><i class="fa fa-bar-chart"></i> Cota de compras</p>
+                        <p><i class="fa fa-tags"></i> Produtos e quantidades permitidas</p>
+                        <p><i class="fa fa-road"></i> Fiscalização nas estradas</p>
+                        <p><i class="fa fa-question-circle-o"></i> Curiosidades</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cupons">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="titulo-cupons">Além do Guia de Compras, receba CUPONS DE VANTAGENS EXCLUSIVAS*</h1>
+                    <h2 class="subtitulo-cupons">Veja alguns exemplos de cupons:</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="text-right cupons-centro">
+                        <img src="{% static 'img/cupons/cupon-elegancia.png' %}" alt="Cupom desconto Elegancia Company">
+                        <img src="{% static 'img/cupons/cupon-casa-bo.png' %}" alt="Cupom desconto Casa Bo">
+                        <img src="{% static 'img/cupons/cupon-dfs.png' %}" alt="Cupom desconto DFS">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 cupons-centro">
+                    <img src="{% static 'img/cupons/cupon-visao-vip.png' %}" alt="Cupom desconto Visão Vip">
+                    <img src="{% static 'img/cupons/cupon-atacado-games.png' %}" alt="Cupom desconto Atacado Games">
+                    <img src="{% static 'img/cupons/cupon-nissei.png' %}" alt="Cupom desconto Casa Nissei">
+                </div>
+                <h3>(*) cupons válidos somente para quem baixar o Guia de Compras Paraguai</h3>
+            </div>
+        </section>
+        <section class="lojas">
+            <div class="container text-center">
+                <h1 class="titulo-lojas">Lojas participantes:</h1>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="{% static 'img/lojas/atacado-games.png' %}" alt="Logo Atacado Games">
+                    <img src="{% static 'img/lojas/roma.png' %}" alt="Logo Roma">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="{% static 'img/lojas/casa-nissei.png' %}" alt="Logo Casa Nissei">
+                    <img src="{% static 'img/lojas/cell-shop.png' %}" alt="Logo Cell Shop">
+                    <img src="{% static 'img/lojas/casa-bo.png' %}" alt="Logo Casa Bo">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="{% static 'img/lojas/elegancia-company.png' %}" alt="Logo Elegancia Company">
+                    <img src="{% static 'img/lojas/visao-vip.jpg' %}">
+                </div>
+            </div>
+        </section>
+        <section class="download">
+            <div class="container">
+                <div class="col-xs-12 col-sm-6">
+                    <h1>Gostou?</h1>
+                    <h2>Então baixe agora mesmo o Guia de Compras e tenha acesso a todas estas vantagens!</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 button-download">
+                    <button type="submit">
+                        Quero Baixar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="objetivo">
+            <div class="container text-center">
+                <div class="col-xs-12">
+                    <img src="{% static 'img/notebook-objetivo.png' %}" alt="Compras Paraguai" class="banner-objetivo">
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                        O <a href="http://www.comprasparaguai.com.br">Compras Paraguai</a>
+                        tem como objetivo facilitar a vida de todos que buscam produtos no Paraguai.
+                        Visite <a href="http://www.comprasparaguai.com.br">nosso site</a> e consulte as melhores ofertas.
+                    <br>
+                        Boas compras!
+                    </p>
+                </div>
+            </div>
+        </section>
 {% endblock %}

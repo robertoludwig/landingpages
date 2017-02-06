@@ -1,0 +1,55 @@
+<form data-parsley-validate="true" action="." method="post">
+
+	{% if messages %}
+		<ul class="messages">
+			{% for msg in messages %}
+				<li>
+					<div class="alert alert-{{ msg.level_tag }}" role="alert">
+						{{ msg.message|safe }}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% csrf_token %}
+	<div class="col-xs-12">
+		{{ form.nome }}
+		{{ form.nome.errors }}
+	</div>
+	<div class="col-xs-12">
+		{{ form.email }}
+		{{ form.email.errors }}
+	</div>
+	<div class="col-xs-12">
+		{{ form.cidade }}
+		{{ form.cidade.errors }}
+	</div>
+	<div class="col-xs-12">
+		{{ form.ja_fez_compras }}
+		{{ form.ja_fez_compras.errors }}
+	</div>
+	<div class="col-xs-12 assuntos">
+		<p>Sobre qual/quais assunto(s) você gostaria de saber mais?</p>
+		{% for checkbox in form.assuntos %}
+			<div class="col-xs-6">
+				<div class="checkbox">
+					<label>
+						{{ checkbox.tag }}
+						<i></i>
+						{{ checkbox.choice_label }}
+					</label>
+				</div>
+			</div>
+		{% endfor %}
+
+		{{ form.quais_assuntos }}
+		{{ form.quais_assuntos.errors }}
+	</div>
+	<div class="col-xs-12 text-center">
+		<button type="submit" class="text-center">
+			<i class="fa fa-download"></i>
+			Baixar Agora
+		</button>
+	</div>
+</form>
