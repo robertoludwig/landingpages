@@ -1,0 +1,10 @@
+.landingpages/
+.idea/
+.bash_profile
+__pycache__/
+*.pyc
+db.sqlite3
+mediafiles/
+/staticfiles
+media/
+.env

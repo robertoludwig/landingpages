@@ -1,0 +1,306 @@
+body{
+    font-family: 'Arial', 'sans-serif';
+}
+header{
+    background-color: #2a52c1;
+    padding-top: 15px;
+}
+.logo{
+    width: 159px;
+}
+/**
+    BANNER INICIAL
+**/
+section.banner-inicial{
+    background-image: linear-gradient(to bottom, #a7a7a7, rgba(246,246,246,0.09));
+}
+section.banner-inicial .banner{
+    margin-top: -65px;
+}
+/**
+    FORMULARIO BANNER
+**/
+section.banner-inicial .coluna-direita-banner{
+    position: relative;
+    bottom: -220px;
+}
+section.banner-inicial .titulo-formulario{
+    width: 100%;
+    background-color: #f86e0c;
+    padding: 20px 15px 50px 15px;
+    border-radius: 15px;
+    margin: 0px auto
+}
+section.banner-inicial .titulo-formulario h3{
+    margin: 0px;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+section.banner-inicial .container-form{
+    background-color: #dfdfdf;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 10px 10px 50px rgba(0,0,0,0.59);
+    margin: -40px;
+}
+section.banner-inicial form textarea{
+    display: none;
+}
+
+section.banner-inicial form button{
+    text-shadow: 1px 1px 3px #4d2c00;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+section.banner-inicial form input[type="text"],
+section.banner-inicial form input[type="email"],
+section.banner-inicial form select
+{
+    margin-bottom: 7px;
+}
+/**
+    DICAS
+**/
+section.dicas{
+    margin-top: -2px;
+    padding: 100px 0px 50px 0px;
+    background-image: linear-gradient(to bottom, #2a52c1, #608bfd);
+}
+section.dicas .titulo-dicas{
+    text-align: justify;
+    font-family: roboto;
+    font-weight: bold;
+    color: #fff;
+    padding: 0px 200px;
+    line-height: 1.3em;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+section.dicas img{
+    height: 87px;
+}
+section.dicas h3, h4{
+    font-family: roboto;
+    font-weight: bold;
+    color: #fff;
+}
+section.dicas h4{
+    margin: 25px 0px;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px #4d2c00;
+}
+section.dicas p{
+    font-family: roboto;
+    color: #fff;
+    font-size: 20px;
+}
+/**
+    CUPONS
+**/
+section.cupons .titulo-cupons{
+    font-family: roboto;
+    color: #666;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+section.cupons .subtitulo-cupons{
+    font-family: roboto;
+    color: #666;
+    font-size: 26px;
+    margin-bottom: 1.5em;
+}
+section.cupons img{
+    height: 190px;
+    margin: 15px 0px;
+}
+section.cupons h3{
+    text-align: justify;
+    color: #666;
+    font-size: 24px;
+    text-align: center;
+}
+/** 
+    LOJAS PARTICIPANTES
+**/
+section.lojas{
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.02), #d0d0d0);
+}
+section.lojas .titulo-lojas{
+    color: #333;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 37px;
+    text-align: center;
+}
+section.lojas img{
+    margin: 30px 0px;
+}
+/**
+    DOWNLOAD GUIA
+**/
+section.download{
+    background-color: #2a52c1;
+    padding: 70px 0px;
+}
+section.download h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+section.download h1,h2{
+    color: #fff;
+}
+section.download button{
+    border: none;
+    color: #fff;
+    text-shadow: 1px 1px 3px #4d2c00;
+    background-image: linear-gradient(to bottom, #ff9c4f, #ff7200);
+    background-color: #fd7300;
+    text-align: center;
+    border-radius: 22px;
+    height: 77px;
+    width: 260px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 60px;
+}
+/** 
+    OBJETIVO
+**/
+
+section.objetivo p{
+    text-align: justify;
+    color: #666;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 0px 250px;
+    font-family: 'News Cycle', sans-serif;
+}
+section.objetivo .banner-objetivo{
+    width: 40%;
+}
+
+/** 
+    @MEDIA SCREEN
+**/
+
+
+@media only screen and (min-width: 1200px){
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+        /**
+            DICAS
+        **/
+    section.dicas{
+        padding-top: 150px;
+    }
+    section.dicas .titulo-dicas{
+        padding: 0px 100px;
+    }
+    /** 
+        OBJETIVO
+    **/
+    section.objetivo p{
+        padding: 0px 50px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px){
+    /**
+        BANNER INICIAL
+    **/
+    section.banner-inicial .titulo-formulario{
+        width: 100%;
+    }
+    /**
+        DICAS
+    **/
+    section.dicas .titulo-dicas{
+        padding: 0px;
+    }
+    /**
+        CUPONS
+    **/
+    section.cupons img {
+        height: 100%;
+        width: 100%;
+    }
+    /** 
+        OBJETIVO
+    **/
+    section.objetivo p{
+        padding: 0px;
+    }
+}
+ 
+@media only screen and (max-width: 768px){
+        /**
+            BANNER INICIAL
+        **/
+    section.banner-inicial .coluna-direita-banner{
+        bottom: auto;
+        top: -50px;
+    }
+    section.banner-inicial .banner{
+        width: 100%;
+        margin-top: -20px;
+    }
+    /**
+        DICAS
+    **/
+    section.dicas{
+        padding: 20px 0px;
+    }
+    section.dicas .titulo-dicas{
+        padding: 0px;
+    }  
+    /**
+        CUPONS
+    **/
+    section.cupons .cupons-centro{
+        text-align: center;
+    }
+    section.cupons img {
+        height: 90%;
+        width: 90%;
+    }
+    /** 
+        LOJAS PARTICIPANTES
+    **/
+    section.lojas img{
+        margin: 15px;
+    }
+    /**
+        DOWNLOAD GUIA
+    **/
+    section.download{
+        text-align: justify;
+    }
+    section.download .button-download{
+        text-align: center;
+    }
+        /** 
+            OBJETIVO
+        **/
+    section.objetivo .banner-objetivo{
+        width: 80%;
+    }
+    section.objetivo p{
+        padding: 0px;
+    }
+}

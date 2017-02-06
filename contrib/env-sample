@@ -1,0 +1,8 @@
+# RUN python contrib/secret_gen.py to generate a new SECRET_KEY
+SECRET_KEY=5%r913*8plc41vmmn5dkl7#ey2l)t5w)*3dn#bgx*p!-qi2mq1
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1, .localhost
+SOCIAL_AUTH_TWITTER_KEY=
+SOCIAL_AUTH_TWITTER_SECRET=
+SOCIAL_AUTH_FACEBOOK_KEY=
+SOCIAL_AUTH_FACEBOOK_SECRET=
