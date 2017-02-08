@@ -1,0 +1,18 @@
+{% extends 'base-guia.html' %}
+{% load static %}
+{% block title %}Sem permissão{% endblock %}
+{% block content %}
+	<section class="">
+		<div class="container">
+			<div class="col-xs-12 col-sm-6">
+				<h1>Ops!</h1>
+				<p>
+					Você não tem permissão para acessar esta página.
+				</p>
+				<p>
+					Para acessá-la, é preciso preencher o <a href="{% url 'home' %}">formulário para baixar o guia</a>.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

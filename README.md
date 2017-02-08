@@ -25,14 +25,7 @@ python manage.py migrate
 python manage.py test
 python manage.py runserver
 ```
-## Configurar Social Auth
 
-https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-login-to-django.html
-Configurar variaveis no .env
-SOCIAL_AUTH_TWITTER_KEY=
-SOCIAL_AUTH_TWITTER_SECRET=
-SOCIAL_AUTH_FACEBOOK_KEY=
-SOCIAL_AUTH_FACEBOOK_SECRET=
 
 ## Como fazer primeiro deploy ?
 
