@@ -1,7 +1,7 @@
 body{
     font-family: 'Arial', 'sans-serif';
 }
-header{
+header {
     background-color: #2a52c1;
     padding-top: 15px;
 }
@@ -11,10 +11,13 @@ header{
 /**
     BANNER INICIAL
 **/
-section.banner-inicial{
+section.banner-inicial {
     background-image: linear-gradient(to bottom, #a7a7a7, rgba(246,246,246,0.09));
+    margin: 0;
+    padding: 0;
+    height: 747px;
 }
-section.banner-inicial .banner{
+section.banner-inicial .banner {
     margin-top: -65px;
 }
 /**
@@ -146,7 +149,7 @@ section.lojas .titulo-lojas{
     text-align: center;
 }
 section.lojas img{
-    margin: 30px 0px;
+    margin: 30px auto;
 }
 /**
     DOWNLOAD GUIA
@@ -173,7 +176,7 @@ section.download a {
     border-radius: 22px;
     height: 77px;
     line-height: 77px;
-    width: 260px;
+    width: auto;
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
