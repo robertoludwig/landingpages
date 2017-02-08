@@ -159,10 +159,11 @@ section.download h1{
     font-weight: bold;
     font-size: 40px;
 }
-section.download h1,h2{
+section.download h1, h2 {
     color: #fff;
 }
-section.download button{
+section.download a {
+    display: block;
     border: none;
     color: #fff;
     text-shadow: 1px 1px 3px #4d2c00;
@@ -171,6 +172,7 @@ section.download button{
     text-align: center;
     border-radius: 22px;
     height: 77px;
+    line-height: 77px;
     width: 260px;
     font-size: 28px;
     font-weight: bold;
