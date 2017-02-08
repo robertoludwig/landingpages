@@ -55,9 +55,6 @@ def baixar_pdf(request):
 
     file_path = os.path.join(os.path.dirname(os.path.realpath(__name__)), 'src/core/static/file/guia-compras-paraguai.pdf')
 
-    # import pdb
-    # pdb.set_trace()
-
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/pdf")
