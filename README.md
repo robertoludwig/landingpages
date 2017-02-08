@@ -14,7 +14,7 @@ Projeto Base
 8. Execute os testes.
 
 ```console
-git clone https://github.com/tyagow/django-base.git Nome-Do-Projeto
+git clone https://github.com/robertoludwig/landingpages.git Nome-Do-Projeto
 cd 
 python -m venv .venv
 source .venv/bin/activate
