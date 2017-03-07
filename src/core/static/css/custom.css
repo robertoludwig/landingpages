@@ -5,7 +5,11 @@ header {
     background-color: #2a52c1;
     padding-top: 15px;
 }
-.logo{
+a.logo {
+    position: relative;
+    z-index: 1;
+}
+img.logo{
     width: 159px;
 }
 /**
