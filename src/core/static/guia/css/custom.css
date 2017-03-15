@@ -143,6 +143,7 @@ section.cupons h3{
 **/
 section.lojas{
     margin-top: 50px;
+    padding-bottom: 50px;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.02), #d0d0d0);
 }
 section.lojas .titulo-lojas{
@@ -189,6 +190,10 @@ section.download a {
 /** 
     OBJETIVO
 **/
+
+section.objetivo {
+    margin-top: 50px;
+}
 
 section.objetivo p{
     text-align: justify;

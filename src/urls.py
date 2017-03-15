@@ -27,8 +27,9 @@ urlpatterns += [
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include('src.accounts.urls',  namespace='accounts')),
     url(r'^$', core_views.home, name='home'),
-    url(r'^sucesso-inscricao/', core_views.sucesso_inscricao, name='sucesso_inscricao'),
-    url(r'^sem-permissao/', core_views.sem_permissao, name='sem_permissao'),
-    url(r'^guia-compras-paraguai.pdf', core_views.baixar_pdf, name='baixar_pdf'),
+    url(r'^ebook-guia-de-compras-no-paraguai/$', core_views.home_guia, name='home_guia'),
+    url(r'^ebook-guia-de-compras-no-paraguai/sucesso-inscricao/', core_views.sucesso_inscricao, name='sucesso_inscricao'),
+    url(r'^ebook-guia-de-compras-no-paraguai/sem-permissao/', core_views.sem_permissao, name='sem_permissao'),
+    url(r'^ebook-guia-de-compras-no-paraguai/guia-compras-paraguai.pdf', core_views.baixar_pdf, name='baixar_pdf'),
     # url('', include('social_django.urls', namespace='social'))
 ]

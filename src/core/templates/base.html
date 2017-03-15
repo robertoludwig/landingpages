@@ -3,34 +3,224 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}Projeto Base{% endblock %}</title>
-
+    <title>{% block title %}Guias do Compras Paraguai{% endblock %}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Descrição">
     <meta name="author" content="Tiago Almeida">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="{% static 'main/js/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static 'main/css/custom.css' %}" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
-
-    {#        <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>#}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script src="{% static 'js/main.js' %}"></script>
 </head>
 
 <body>
-{% block  navbar %}
-    {% include 'widgets/nav.html' %}
-{% endblock %}
-{% bootstrap_messages %}
-{% block content %}{% endblock %}
-{% block script %}{% endblock %}
-
+	<section class="after-header-title text-center">
+		<div class="container">
+			<h1>Guia do Paraguai | Compras Paraguai</h1>
+			<p class="intro">
+				O próximo nível está aqui. Aprenda com a referência em compras no Paraguai.
+			</p>
+		</div>
+	</section>
+	<section class="">
+		<div class="container">
+			<div class="wrap">
+{#				<a href="http://viverdeblog.com/producao-de-conteudo/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=pcm"#}
+{#				   class="course-box course-open clearfix">#}
+{#					<div class="course-cover">#}
+{#						<div class="course-logo">#}
+{#							<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-pcm.png"#}
+{#								 alt="Logo do curso Produção de conteúdos memoráveis">#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="course-info">#}
+{#						<div class="course-label">Curso:</div>#}
+{#						<h3 class="course-title">Produção de conteúdos memoráveis</h3>#}
+{#						<p class="course-description">O curso mais completo para você produzir conteúdos memoráveis 2x#}
+{#							mais rápido e com 10x mais poder de viralização e vendas.</p>#}
+{#						<span class="btn btn-success btn-lg">Saiba mais e Inscreva-se <img class="arrow"#}
+{#																						   src="http://viverdeblog.com/wp-content/themes/eleven40/images/ico-btn-cta.png"#}
+{#																						   alt=""></span>#}
+{#					</div>#}
+{#				</a>#}
+				<a href="{% url 'home_guia' %}" class="course-box course-open clearfix">
+					<div class="course-cover">
+						<div class="course-logo">
+{#							<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-bdz.png" alt="Guia Compras Paraguai">#}
+							<img src="{% static 'guia/img/imagem-home-guia-paraguai-02.png' %}" alt="Guia de Compras no Paraguai">
+						</div>
+					</div>
+					<div class="course-info">
+						<div class="course-label">E-book:</div>
+						<h3 class="course-title">
+							Guia de Compras no Paraguai
+							<small>100% GRÁTIS</small>
+						</h3>
+						<p class="course-description">
+							Saiba tudo sobre como fazer suas compras no Paraguai sem stress e totalmente grátis.
+						</p>
+						<span class="btn btn-success btn-lg">
+							Baixe grátis
+							<img class="arrow" src="http://viverdeblog.com/wp-content/themes/eleven40/images/ico-btn-cta.png" alt="">
+						</span>
+					</div>
+				</a>
+{#				<div class="row row-eq-height">#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/infograficos-memoraveis/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=im">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-im.png"#}
+{#											 alt="Logo do Curso Infográficos Memoráveis">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Infográficos Memoráveis</h3>#}
+{#								<p class="course-description">Descubra como geramos mais de 5 milhões de visualizações#}
+{#									de páginas somente com a produção de infográficos memoráveis.</p>#}
+{#								<a href="http://viverdeblog.com/infograficos-memoraveis/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=im"#}
+{#								   class="btn btn-success">Inscreva-se agora!#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/produtividade-para-produtores-de-conteudo/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=ppc">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-ppc.png"#}
+{#											 alt="Logo do Curso Produtividade para Produtores de Conteúdo">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Produtividade para Produtores de Conteúdo</h3>#}
+{#								<p class="course-description">Técnicas e dicas para aumentar sua produtividade#}
+{#									garantindo que o acúmulo de tarefas não será uma barreira para o seu sucesso.</p>#}
+{#								<a href="http://viverdeblog.com/produtividade-para-produtores-de-conteudo/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=ppc"#}
+{#								   class="btn btn-success">Inscreva-se agora!#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/aprendizado-acelerado/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=aa">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-aa.png"#}
+{#											 alt="Logo do Curso Aprendizado Acelerado">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Aprendizado Acelerado</h3>#}
+{#								<p class="course-description">Acelere seu aprendizado e aumente em até 5x sua retenção#}
+{#									de conhecimento.</p>#}
+{#								<a href="http://viverdeblog.com/aprendizado-acelerado/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=aa"#}
+{#								   class="btn btn-success">Inscreva-se agora!#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/do-zero-a-primeira-venda/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=zpv">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-zpv.png"#}
+{#											 alt="Logo do Curso Do Zero a Primeira Venda">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Do Zero a Primeira Venda</h3>#}
+{#								<p class="course-description">Acredite: fazer a primeira venda é mais simples do que#}
+{#									você imagina.</p>#}
+{#								<a href="http://viverdeblog.com/do-zero-a-primeira-venda/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=zpv"#}
+{#								   class="btn btn-success">Inscreva-se agora!#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/revolucao-do-conteudo/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=revc">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/revolucao-do-conteudo.png"#}
+{#											 alt="Logo do curso Revolução do Conteúdo">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Revolução do Conteúdo</h3>#}
+{#								<p class="course-description">Domine um novo tipo de marketing planejando melhor seus#}
+{#									conteúdos e aumente em 3x seu número de leads e em até 580% seus clientes#}
+{#									ideais.</p>#}
+{#								<a href="http://viverdeblog.com/revolucao-do-conteudo/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=revc"#}
+{#								   class="btn btn-outline">Saiba mais#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/blog-memoravel/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=bm">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-bm-cover.jpg"#}
+{#											 alt="Logo do curso Blog Memorável">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">Blog Memorável</h3>#}
+{#								<p class="course-description">O curso absolutamente completo que ensina passo-a-passo#}
+{#									como obter sua liberdade financeira através de um blog profissional, sem precisar#}
+{#									ter qualquer conhecimento técnico avançado para criar sites.</p>#}
+{#								<a href="http://viverdeblog.com/blog-memoravel/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=bm"#}
+{#								   class="btn btn-outline">Saiba mais#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="course-box clearfix">#}
+{#							<div class="course-cover">#}
+{#								<div class="course-logo">#}
+{#									<a href="http://viverdeblog.com/vdb-club/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=vdb-club">#}
+{#										<img src="http://viverdeblog.com/wp-content/uploads/2016/07/img-curso-club.png"#}
+{#											 alt="Logo do curso VDB Club">#}
+{#									</a>#}
+{#								</div>#}
+{#							</div>#}
+{#							<div class="course-info">#}
+{#								<div class="course-label">Curso:</div>#}
+{#								<h3 class="course-title">VDB Club</h3>#}
+{#								<p class="course-description">Nosso clube exclusivo com novos conteúdos originais#}
+{#									publicados à cada semana + uma interação épica entre alunos memoráveis.</p>#}
+{#								<a href="http://viverdeblog.com/vdb-club/?int_source=viver-de-blog&amp;int_medium=card&amp;int_campaign=vdb-club"#}
+{#								   class="btn btn-outline">Saiba mais#}
+{#								</a>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div>#}
+			</div>
+		</div>
+	</section>
 </body>
 </html>

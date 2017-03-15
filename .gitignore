@@ -9,3 +9,4 @@ mediafiles/
 media/
 .env
 .help
+/docs
