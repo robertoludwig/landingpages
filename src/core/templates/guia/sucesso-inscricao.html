@@ -7,11 +7,15 @@
 			<div class="col-xs-12 col-sm-6">
 				<h1>Sucesso!</h1>
 				<p>
-					Pronto, agora você já pode baixar o Guia Compras Paraguai :)
+					Pronto, agora você já pode baixar o Guia de Compras no Paraguai e os Cupons :)
 				</p>
-				<a class="btn btn-danger" href="{% url 'baixar_pdf' %}">
+				<a class="btn btn-danger" href="{% url 'baixar_pdf' %}" target="_blank">
 					<i class="fa fa-download"></i>
-					Fazer Download
+					Fazer Download do Guia
+				</a>
+				<a class="btn btn-danger" href="{% url 'baixar_cupons_pdf' %}" target="_blank">
+					<i class="fa fa-download"></i>
+					Fazer Download dos Cupons
 				</a>
 			</div>
 		</div>

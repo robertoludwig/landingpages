@@ -65,6 +65,20 @@ def baixar_pdf(request):
     else:
         raise Http404
 
+def baixar_cupons_pdf(request):
+    if not 'inscricao_guia' in request.session:
+        return HttpResponseRedirect(reverse('sem_permissao'))
+
+    file_path = os.path.join(os.path.dirname(os.path.realpath(__name__)), 'src/core/static/guia/file/guia-compras-paraguai.pdf')
+
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/pdf")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    else:
+        raise Http404
+
 def sem_permissao(request):
     return render(request, 'guia/sem-permissao.html')
 

@@ -31,5 +31,6 @@ urlpatterns += [
     url(r'^ebook-guia-de-compras-no-paraguai/sucesso-inscricao/', core_views.sucesso_inscricao, name='sucesso_inscricao'),
     url(r'^ebook-guia-de-compras-no-paraguai/sem-permissao/', core_views.sem_permissao, name='sem_permissao'),
     url(r'^ebook-guia-de-compras-no-paraguai/guia-compras-paraguai.pdf', core_views.baixar_pdf, name='baixar_pdf'),
+    url(r'^ebook-guia-de-compras-no-paraguai/cupons-compras-paraguai.pdf', core_views.baixar_cupons_pdf, name='baixar_cupons_pdf'),
     # url('', include('social_django.urls', namespace='social'))
 ]
