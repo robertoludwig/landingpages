@@ -69,7 +69,7 @@ def baixar_cupons_pdf(request):
     if not 'inscricao_guia' in request.session:
         return HttpResponseRedirect(reverse('sem_permissao'))
 
-    file_path = os.path.join(os.path.dirname(os.path.realpath(__name__)), 'src/core/static/guia/file/guia-compras-paraguai.pdf')
+    file_path = os.path.join(os.path.dirname(os.path.realpath(__name__)), 'src/core/static/guia/file/cupons-lojas-Paraguai.pdf')
 
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
