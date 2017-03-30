@@ -296,9 +296,7 @@ section.objetivo .banner-objetivo{
     /** 
         LOJAS PARTICIPANTES
     **/
-    section.lojas img{
-        margin: 15px;
-    }
+
     /**
         DOWNLOAD GUIA
     **/
@@ -317,6 +315,14 @@ section.objetivo .banner-objetivo{
     section.objetivo p{
         padding: 0px;
     }
+
+    .divisor-mobile {
+        clear: both;
+        height: 1px;
+        float: left;
+        width: 100%;
+    }
+
 }
 
 ul.messages,
