@@ -9,11 +9,11 @@
 				<p>
 					Pronto, agora você já pode baixar o Guia de Compras no Paraguai e os Cupons :)
 				</p>
-				<a class="btn btn-danger" href="{% url 'baixar_pdf' %}" target="_blank">
+				<a class="btn btn-danger" href="{% url 'baixar_pdf' %}" target="_blank" onclick="ga('send', 'event', 'Clique Botão', 'Baixar PDF', 'Guia de Compras 2017/04');">
 					<i class="fa fa-download"></i>
 					Fazer Download do Guia
 				</a>
-				<a class="btn btn-danger" href="{% url 'baixar_cupons_pdf' %}" target="_blank">
+				<a class="btn btn-danger" href="{% url 'baixar_cupons_pdf' %}" target="_blank" onclick="ga('send', 'event', 'Clique Botão', 'Baixar PDF', 'Cupom de desconto 2017/04');">
 					<i class="fa fa-download"></i>
 					Fazer Download dos Cupons
 				</a>

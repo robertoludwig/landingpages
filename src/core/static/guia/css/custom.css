@@ -193,16 +193,22 @@ section.download a {
 
 section.objetivo {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-section.objetivo p{
+section.objetivo p {
     text-align: justify;
     color: #666;
     font-weight: bold;
     font-size: 26px;
-    padding: 50px 250px 100px 250px;
     font-family: 'News Cycle', sans-serif;
 }
+
+section.objetivo img {
+    display: block;
+    width: 100%;
+}
+
 section.objetivo .banner-objetivo{
     width: 40%;
 }
@@ -213,7 +219,10 @@ section.objetivo .banner-objetivo{
 
 
 @media only screen and (min-width: 1200px){
-    
+    section.objetivo p {
+        margin-top: 70px;
+        padding-left: 50px;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){
