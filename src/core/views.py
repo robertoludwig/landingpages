@@ -1,5 +1,6 @@
 import os
 
+import requests
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect, HttpResponse, Http404
@@ -37,7 +38,9 @@ def cria_form_guia(request):
             existe.ativo = True
         existe.save()
     else:
-        form.save()
+        usuario = form.save()
+        url_action = 'http://www.comprasparaguai.com.br/newsletter/clique/?campanha=inscreveu_LP_ebook_guia_compras_vantagens&origem=landing-page&email=' + usuario.email
+        request_url(url_action)
 
     #cria a sessao para baixar o app
     request.session['inscricao_guia'] = True
@@ -81,4 +84,17 @@ def baixar_cupons_pdf(request):
 
 def sem_permissao(request):
     return render(request, 'guia/sem-permissao.html')
+
+def request_url(urlData):
+    import urllib
+    from requests.exceptions import HTTPError
+
+    try:
+        r = requests.get(urlData)
+        r.raise_for_status()
+    except HTTPError:
+        return None
+    else:
+        webURL = urllib.request.urlopen(urlData)
+        webURL.read()
 
