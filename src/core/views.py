@@ -94,8 +94,6 @@ def request_url(urlData):
         r = requests.get(urlData)
         r.raise_for_status()
     except HTTPError:
-        pass
-    else:
         webURL = urllib.request.urlopen(urlData)
         webURL.read()
 
