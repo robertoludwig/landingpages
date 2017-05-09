@@ -11,3 +11,4 @@ uWSGI==2.0.14
 psycopg2==2.6.1
 django-bootstrap3
 pytz
+requests==2.10.0
