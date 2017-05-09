@@ -28,19 +28,20 @@ def cria_form_guia(request):
         return render(request, 'guia/index.html', {'form': form})
 
     try:
-        existe = UsuarioGuia.objects.get(email=form.cleaned_data['email'])
+        usuario = UsuarioGuia.objects.get(email=form.cleaned_data['email'])
     except ObjectDoesNotExist:
-        existe = False
+        usuario = False
 
-    if existe:
-        existe.nome = form.cleaned_data['nome']
-        if not existe.ativo:
-            existe.ativo = True
-        existe.save()
+    if usuario:
+        usuario.nome = form.cleaned_data['nome']
+        if not usuario.ativo:
+            usuario.ativo = True
+        usuario.save()
     else:
         usuario = form.save()
-        url_action = 'http://www.comprasparaguai.com.br/newsletter/clique/?campanha=inscreveu_LP_ebook_guia_compras_vantagens&origem=landing-page&email=' + usuario.email
-        request_url(url_action)
+
+    url_action = 'http://www.comprasparaguai.com.br/newsletter/clique/?campanha=inscreveu_LP_ebook_guia_compras_vantagens&origem=landing-page&email=' + usuario.email
+    request_url(url_action)
 
     #cria a sessao para baixar o app
     request.session['inscricao_guia'] = True
@@ -93,8 +94,11 @@ def request_url(urlData):
         r = requests.get(urlData)
         r.raise_for_status()
     except HTTPError:
-        return None
+        pass
     else:
         webURL = urllib.request.urlopen(urlData)
         webURL.read()
+
+    # import pdb
+    # pdb.set_trace()
 
